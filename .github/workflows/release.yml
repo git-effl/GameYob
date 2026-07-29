@@ -29,7 +29,6 @@ jobs:
           make
           mkdir gameyob/
           cp gameyob.nds gameyob/
-          cp gameyob.dsi gameyob/
       - name: Publish build to GH Actions
         uses: actions/upload-artifact@v4
         with:
@@ -41,4 +40,3 @@ jobs:
         with:
           files: |
             gameyob/gameyob.nds
-            gameyob/gameyob.dsi
