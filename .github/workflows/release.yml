@@ -27,18 +27,18 @@ jobs:
         working-directory: platform/ds
         run: |
           make
-          mkdir nesDS/
-          cp nesDS.nds nesDS/
-          cp nesDS.dsi nesDS/
+          mkdir gameyob/
+          cp gameyob.nds gameyob/
+          cp gameyob.dsi gameyob/
       - name: Publish build to GH Actions
         uses: actions/upload-artifact@v4
         with:
-          path: nesDS
+          path: gameyob
           name: build
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            nesDS/nesDS.nds
-            nesDS/nesDS.dsi
+            gameyob/gameyob.nds
+            gameyob/gameyob.dsi
