@@ -6,6 +6,7 @@
 #include <nds/timers.h>
 #include "common.h"
 
+void doCommand(u32 command);
 void startChannel(int c);
 
 // The lower this value, the more often sound will be synchronized.
