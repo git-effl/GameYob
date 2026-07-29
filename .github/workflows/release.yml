@@ -24,8 +24,8 @@ jobs:
         run: git config --global safe.directory '*'
       - name: Build & Package nesDS
         id: build
+        working-directory: platform/ds
         run: |
-          cd app/platform/ds
           make
           chmod +x make_cia
           ./make_cia --srl="nesDS.dsi" --id_0=$(git rev-parse --short=7 HEAD) --tikID=$(git rev-parse --short=16 HEAD)
