@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: nesDS
-          name: build
+          name: gameyob
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
