@@ -6,6 +6,8 @@
 #include <nds/timers.h>
 #include "common.h"
 
+void startChannel(int c);
+
 // The lower this value, the more often sound will be synchronized.
 #define SOUND_RESOLUTION 150
 
